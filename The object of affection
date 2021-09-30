@@ -1,0 +1,45 @@
+using System;
+
+namespace DatingProfile
+{ 
+  class Profile 
+  {
+    // fields
+   private string name;
+   private int age;
+   private string city;
+   private string country;
+   private string pronouns;
+   private string[] hobbies;
+    
+   // constructor
+   public Profile(string name, int age, string city, string country, string pronouns = "they/them")
+   {
+    this.name = name; 
+    this.age = age ; 
+    this.city = city; 
+    this.country = country; 
+    this.pronouns = pronouns;
+   }
+  //methods
+   public string ViewProfile()
+   {
+       
+     string bio = $"Name: {name}\n Age: {age}\n City: {city}\n Country: {country}\n Pronouns: {pronouns}\n Hobbies: {hobbies}";
+     
+     foreach(string hobbie in this.hobbies)
+     {
+       
+     }
+     
+     return bio;
+   }
+   
+   public void SetHobbies(string[] hobbies)
+   {
+     this.hobbies = hobbies;
+   }
+    
+    
+  }
+}
